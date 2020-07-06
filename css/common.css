@@ -1,0 +1,60 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Galada&family=Nanum+Myeongjo:wght@400;800&family=Open+Sans:wght@400;700&display=swap');
+
+/* tag reset */
+html,
+body{
+    height: 100%;
+}
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    font-family: 'Open Sans', 'Nanum Myeongjo', sans-serif, 'Malgun Gothic', '맑은 고딕';   
+    color: #333;
+}
+h1, h2, h3, h4, h5{
+    font-weight: normal;
+}
+ul{
+    list-style: none;
+}
+a:link,
+a:visited, 
+a:hover, 
+a:active{
+    text-decoration: none;
+    color: inherit;
+}
+button{
+    cursor: pointer;
+    border: 0;
+    color: inherit;
+    font-size: inherit;
+    font-family: inherit;
+    background: none;
+    outline: none;
+}
+img{
+    vertical-align: middle;
+    height: auto;
+}
+
+/* common style */
+.blind{
+    position: absolute;
+    top: 0;
+    left: -99999px;
+    text-indent: -99999px;
+    width: 1px;
+    height: 1px;
+    line-height: 0;
+    font-size: 0;
+    overflow: hidden;   
+}
+.clearfix:after {
+    content: "";
+    display: block;
+    clear: both; 
+}
