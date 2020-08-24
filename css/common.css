@@ -1,60 +1,73 @@
 @charset "UTF-8";
 @import url('https://fonts.googleapis.com/css2?family=Galada&family=Nanum+Myeongjo:wght@400;800&Nanum+Gothic:wght@400;700&family=Open+Sans:wght@400;700&display=swap');
 
+/* color
+#383e56
+#f69e7b
+#eedad1
+#d4b5b0
+*/
+
 /* tag reset */
 html,
-body{
-    height: 100%;
+body {
+  height: 100%;
 }
-*{
-    padding: 0;
-    margin: 0;
+* {
+  padding: 0;
+  margin: 0;
 }
-body{
-    font-family: 'Nanum Gothic', 'Open Sans', sans-serif, 'Malgun Gothic', '맑은 고딕';   
-    color: #333;
+body {
+  font-family: 'Nanum Gothic', 'Open Sans', sans-serif, 'Malgun Gothic',
+    '맑은 고딕';
+  color: #383e56;
+  /* color: #3e464c; */
 }
-h1, h2, h3, h4, h5{
-    font-weight: normal;
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-weight: normal;
 }
-ul{
-    list-style: none;
+ul {
+  list-style: none;
 }
 a:link,
-a:visited, 
-a:hover, 
-a:active{
-    text-decoration: none;
-    color: inherit;
+a:visited,
+a:hover,
+a:active {
+  text-decoration: none;
+  color: inherit;
 }
-button{
-    cursor: pointer;
-    border: 0;
-    color: inherit;
-    font-size: inherit;
-    font-family: inherit;
-    background: none;
-    outline: none;
+button {
+  cursor: pointer;
+  border: 0;
+  color: inherit;
+  font-size: inherit;
+  font-family: inherit;
+  background: none;
+  outline: none;
 }
-img{
-    vertical-align: middle;
-    height: auto;
+img {
+  vertical-align: middle;
+  height: auto;
 }
 
 /* common style */
-.blind{
-    position: absolute;
-    top: 0;
-    left: -99999px;
-    text-indent: -99999px;
-    width: 1px;
-    height: 1px;
-    line-height: 0;
-    font-size: 0;
-    overflow: hidden;   
+.blind {
+  position: absolute;
+  top: 0;
+  left: -99999px;
+  text-indent: -99999px;
+  width: 1px;
+  height: 1px;
+  line-height: 0;
+  font-size: 0;
+  overflow: hidden;
 }
 .clearfix:after {
-    content: "";
-    display: block;
-    clear: both; 
+  content: '';
+  display: block;
+  clear: both;
 }
