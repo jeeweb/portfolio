@@ -159,7 +159,7 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  width: 80vw;
+  width: 36vw;
   height: 100vh;
   padding: 24px;
   box-sizing: border-box;
@@ -196,7 +196,6 @@
 }
 
 /* greetings */
-
 .section__greetings .section__greetings-list .section__greetings-msg {
   font-size: 3rem;
   font-weight: bold;
@@ -210,12 +209,17 @@
 }
 
 /* skills */
-#section .section__skills {
-  /* flex-direction: column; */
+.section__skills .section__skills-wrap {
+  width: 100%;
+  display: flex;
   justify-content: center;
+  align-items: flex-start;
 }
 .section__skills .section__skills-group {
-  width: 50%;
+  width: 45%;
+}
+.section__skills .section__skills-group:last-child {
+  margin-left: 5%;
 }
 .section__skills .section__skills-group .skills__title {
   font-size: 2rem;
@@ -224,48 +228,133 @@
   margin-bottom: 0.5rem;
 }
 .section__skills .section__skills-group .skills__ability {
-  display: flex;
+  position: relative;
+  padding-bottom: 28px;
 }
 .section__skills .section__skills-group .skills__ability .skills__ability-bars {
-  position: relative;
-  width: 10px;
-  height: 10px;
-  margin-right: 4px;
-  background-image: linear-gradient(to right, #cc2b5e, #753a88);
-}
-.section__skills
-  .section__skills-group
-  .skills__ability
-  .skills__ability-bars:after {
-  content: '';
   position: absolute;
-  width: 8px;
-  height: 8px;
-  left: 1px;
-  top: 1px;
-  background: #fff;
+  left: 0;
+  top: 7px;
+  width: 100%;
+  height: 10px;
+  background-color: #eedad1;
 }
+
 .section__skills
   .section__skills-group
   .skills__ability
-  .skills__ability-bars.bars--on:after {
-  background: transparent;
+  .skills__ability-bars.bars--on {
+  background-color: #f69e7b;
+}
+.section__skills
+  .skills__list-items.skills__list-html
+  .skills__ability
+  .skills__ability-bars.bars--on,
+.section__skills
+  .skills__list-items.skills__list-css
+  .skills__ability
+  .skills__ability-bars.bars--on,
+.section__skills
+  .skills__list-items.skills__list-ps
+  .skills__ability
+  .skills__ability-bars.bars--on,
+.section__skills
+  .skills__list-items.skills__list-ai
+  .skills__ability
+  .skills__ability-bars.bars--on {
+  width: 80%;
+}
+.section__skills
+  .skills__list-items.skills__list-sass
+  .skills__ability
+  .skills__ability-bars.bars--on,
+.section__skills
+  .skills__list-items.skills__list-jquery
+  .skills__ability
+  .skills__ability-bars.bars--on,
+.section__skills
+  .skills__list-items.skills__list-zeplin
+  .skills__ability
+  .skills__ability-bars.bars--on {
+  width: 70%;
+}
+.section__skills
+  .skills__list-items.skills__list-js
+  .skills__ability
+  .skills__ability-bars.bars--on,
+.section__skills
+  .skills__list-items.skills__list-xd
+  .skills__ability
+  .skills__ability-bars.bars--on {
+  width: 60%;
+}
+
+.section__skills .section__skills-group .skills__ability .skills__ability-txt {
+  position: absolute;
+  top: 2px;
+  width: 32px;
+  height: 20px;
+  border-radius: 4px;
+  background-color: #f69e7b;
+  font-size: 0.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.section__skills
+  .skills__list-items.skills__list-html
+  .skills__ability
+  .skills__ability-txt,
+.section__skills
+  .skills__list-items.skills__list-css
+  .skills__ability
+  .skills__ability-txt,
+.section__skills
+  .skills__list-items.skills__list-ps
+  .skills__ability
+  .skills__ability-txt,
+.section__skills
+  .skills__list-items.skills__list-ai
+  .skills__ability
+  .skills__ability-txt {
+  left: 80%;
+}
+.section__skills
+  .skills__list-items.skills__list-sass
+  .skills__ability
+  .skills__ability-txt,
+.section__skills
+  .skills__list-items.skills__list-jquery
+  .skills__ability
+  .skills__ability-txt,
+.section__skills
+  .skills__list-items.skills__list-zeplin
+  .skills__ability
+  .skills__ability-txt {
+  left: 70%;
+}
+.section__skills
+  .skills__list-items.skills__list-js
+  .skills__ability
+  .skills__ability-txt,
+.section__skills
+  .skills__list-items.skills__list-xd
+  .skills__ability
+  .skills__ability-txt {
+  left: 60%;
 }
 
 /* project */
 #section .section__project {
-  overflow: auto;
-}
-.section__project .project__list {
-  display: flex;
-  flex-wrap: nowrap;
+  display: block;
 }
 .section__project .project__list .project__list-items {
-  width: 40vw;
-  margin: 0 4em;
+  height: 100vh;
 }
+
 .section__project .project__list .project__list-title {
-  padding-top: 100%;
+  /* padding-top: 100%; */
   font-size: 2.4rem;
   font-weight: bold;
   font-family: 'Open Sans';

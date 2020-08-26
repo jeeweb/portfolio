@@ -66,8 +66,3 @@ img {
   font-size: 0;
   overflow: hidden;
 }
-.clearfix:after {
-  content: '';
-  display: block;
-  clear: both;
-}
