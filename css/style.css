@@ -351,8 +351,15 @@
 }
 .section__project .project__list .project__list-items {
   height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-
+.section__project .project__list .project__list-items .project__img {
+  background-color: #d4b5b0;
+  height: 80vh;
+  width: 36vw;
+}
 .section__project .project__list .project__list-title {
   /* padding-top: 100%; */
   font-size: 2.4rem;
