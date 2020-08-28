@@ -54,8 +54,8 @@
 
 /* wrapper */
 .wrapper {
-  display: flex;
-  height: 100vh;
+  height: 100%;
+  color: #eedad1;
 }
 
 /* header */
@@ -64,17 +64,10 @@
   top: 0;
   left: 0;
   right: 0;
-  height: 80px;
-  padding: 0 24px;
-
   display: flex;
   justify-content: space-between;
-  align-items: center;
-
-  /* background-color: rgba(255, 255, 255, 0.9);
-  box-shadow: 0 30px 60px -60px rgba(50, 50, 93, 0.25),
-    0 18px 36px -18px rgba(0, 0, 0, 0.15),
-    0 -12px 36px -8px rgba(0, 0, 0, 0.025); */
+  height: 80px;
+  padding: 24px;
   z-index: 500;
 }
 .header .header__logo {
@@ -154,38 +147,34 @@
   transform: translateY(1px) rotate(-45deg);
 }
 
-/* aside */
-.aside {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  width: 36vw;
-  height: 100vh;
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
   padding: 24px;
-  box-sizing: border-box;
-  background-color: #383e56;
-  color: #eedad1;
-  /* background-color: #ccdb43; */
 }
-.aside .footer .footer__links {
+.footer .footer__links {
   display: flex;
   font-size: 1.6rem;
   margin-bottom: 10px;
 }
-.aside .footer .footer__links li {
+.footer .footer__links li {
   padding-right: 16px;
 }
-.aside .footer .footer__copyright {
+.footer .footer__copyright {
   font-size: 0.8rem;
   opacity: 0.5;
 }
 
 /* section common */
 #section {
-  flex-grow: 1;
-  position: relative;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 64vw;
   height: 100vh;
-  overflow: auto;
+  color: #383e56;
 }
 
 #section article {
@@ -193,6 +182,7 @@
   align-items: center;
   height: 100vh;
   padding: 0 24px;
+  background-color: #fff;
 }
 
 /* greetings */
@@ -349,11 +339,17 @@
 #section .section__project {
   display: block;
 }
+.section__project .project__list {
+  position: relative;
+}
 .section__project .project__list .project__list-items {
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  position: absolute;
+  width: 100vw;
+  left: calc(-36vw - 24px);
 }
 .section__project .project__list .project__list-items .project__img {
   background-color: #d4b5b0;
