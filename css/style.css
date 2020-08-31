@@ -172,8 +172,7 @@
   position: absolute;
   right: 0;
   top: 0;
-  width: 64vw;
-  height: 100vh;
+  width: 68vw;
   color: #383e56;
 }
 
@@ -187,11 +186,16 @@
 
 /* greetings */
 .section__greetings .section__greetings-list .section__greetings-msg {
-  font-size: 3rem;
-  font-weight: bold;
+  font-size: 6rem;
+  font-family: 'Courgette';
 }
 .section__greetings .section__greetings-list .section__greetings-msg p {
   display: none;
+  margin-left: -242px;
+  letter-spacing: -2px;
+}
+.section__greetings .section__greetings-list .section__greetings-msg p span {
+  color: #eedad1;
 }
 .section__greetings .section__greetings-list .section__greetings-text {
   font-size: 1.6rem;
@@ -338,9 +342,11 @@
 /* project */
 #section .section__project {
   display: block;
+  height: 100%;
 }
-.section__project .project__list {
+.section__project .project__list-box {
   position: relative;
+  height: 100vh;
 }
 .section__project .project__list .project__list-items {
   height: 100vh;
@@ -352,12 +358,24 @@
   left: calc(-36vw - 24px);
 }
 .section__project .project__list .project__list-items .project__img {
-  background-color: #d4b5b0;
+  background-color: #eedad1;
   height: 80vh;
   width: 36vw;
 }
+.section__project .project__list .project__list-items .project__desc {
+  position: relative;
+  margin-left: 120px;
+}
+.section__project .project__list .project__list-items .project__desc:before {
+  content: '';
+  position: absolute;
+  left: -220px;
+  top: 24px;
+  height: 4px;
+  width: 140px;
+  background-color: #f69e7b;
+}
 .section__project .project__list .project__list-title {
-  /* padding-top: 100%; */
   font-size: 2.4rem;
   font-weight: bold;
   font-family: 'Open Sans';
