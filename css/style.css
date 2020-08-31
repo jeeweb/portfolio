@@ -12,6 +12,7 @@
     transform: translateY(0);
   }
 }
+
 @keyframes navBarBtmAni {
   0% {
     transform: translateY(0);
@@ -21,6 +22,55 @@
   }
   100% {
     transform: translateY(0);
+  }
+}
+
+@keyframes skillsAni80 {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 80%;
+  }
+}
+@keyframes skillsAni70 {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 70%;
+  }
+}
+@keyframes skillsAni60 {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 60%;
+  }
+}
+@keyframes skillsTxtAni80 {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: 80%;
+  }
+}
+@keyframes skillsTxtAni70 {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: 70%;
+  }
+}
+@keyframes skillsTxtAni60 {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: 60%;
   }
 }
 
@@ -54,8 +104,19 @@
 
 /* wrapper */
 .wrapper {
-  height: 100%;
+  overflow: hidden;
   color: #eedad1;
+  position: relative;
+}
+.wrapper:after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100vh;
+  width: 68vw;
+  background-color: #fff;
+  z-index: -1;
 }
 
 /* header */
@@ -169,11 +230,11 @@
 
 /* section common */
 #section {
-  position: absolute;
-  right: 0;
-  top: 0;
-  width: 68vw;
+  height: 100vh;
+  width: 100%;
+  overflow: auto;
   color: #383e56;
+  scroll-snap-type: y mandatory;
 }
 
 #section article {
@@ -181,10 +242,13 @@
   align-items: center;
   height: 100vh;
   padding: 0 24px;
-  background-color: #fff;
+  scroll-snap-align: start;
 }
 
 /* greetings */
+#section article.section__greetings {
+  padding-left: calc(32vw + 24px);
+}
 .section__greetings .section__greetings-list .section__greetings-msg {
   font-size: 6rem;
   font-family: 'Courgette';
@@ -203,6 +267,9 @@
 }
 
 /* skills */
+#section article.section__skills {
+  padding-left: calc(32vw + 24px);
+}
 .section__skills .section__skills-wrap {
   width: 100%;
   display: flex;
@@ -239,54 +306,35 @@
   .skills__ability
   .skills__ability-bars.bars--on {
   background-color: #f69e7b;
+  width: 0;
 }
-.section__skills
-  .skills__list-items.skills__list-html
-  .skills__ability
-  .skills__ability-bars.bars--on,
-.section__skills
-  .skills__list-items.skills__list-css
-  .skills__ability
-  .skills__ability-bars.bars--on,
-.section__skills
-  .skills__list-items.skills__list-ps
-  .skills__ability
-  .skills__ability-bars.bars--on,
-.section__skills
-  .skills__list-items.skills__list-ai
+.section__skills.active
+  .skills__list-items.skills__list-item80
   .skills__ability
   .skills__ability-bars.bars--on {
   width: 80%;
+  animation: skillsAni80 1s ease-out;
 }
-.section__skills
-  .skills__list-items.skills__list-sass
-  .skills__ability
-  .skills__ability-bars.bars--on,
-.section__skills
-  .skills__list-items.skills__list-jquery
-  .skills__ability
-  .skills__ability-bars.bars--on,
-.section__skills
-  .skills__list-items.skills__list-zeplin
+.section__skills.active
+  .skills__list-items.skills__list-item70
   .skills__ability
   .skills__ability-bars.bars--on {
   width: 70%;
+  animation: skillsAni70 1s ease-out;
 }
-.section__skills
-  .skills__list-items.skills__list-js
-  .skills__ability
-  .skills__ability-bars.bars--on,
-.section__skills
-  .skills__list-items.skills__list-xd
+.section__skills.active
+  .skills__list-items.skills__list-item60
   .skills__ability
   .skills__ability-bars.bars--on {
   width: 60%;
+  animation: skillsAni60 1s ease-out;
 }
 
 .section__skills .section__skills-group .skills__ability .skills__ability-txt {
   position: absolute;
   top: 2px;
   width: 32px;
+  left: 0;
   height: 20px;
   border-radius: 4px;
   background-color: #f69e7b;
@@ -296,47 +344,26 @@
   align-items: center;
 }
 
-.section__skills
-  .skills__list-items.skills__list-html
-  .skills__ability
-  .skills__ability-txt,
-.section__skills
-  .skills__list-items.skills__list-css
-  .skills__ability
-  .skills__ability-txt,
-.section__skills
-  .skills__list-items.skills__list-ps
-  .skills__ability
-  .skills__ability-txt,
-.section__skills
-  .skills__list-items.skills__list-ai
+.section__skills.active
+  .skills__list-items.skills__list-item80
   .skills__ability
   .skills__ability-txt {
   left: 80%;
+  animation: skillsTxtAni80 1s ease-out;
 }
-.section__skills
-  .skills__list-items.skills__list-sass
-  .skills__ability
-  .skills__ability-txt,
-.section__skills
-  .skills__list-items.skills__list-jquery
-  .skills__ability
-  .skills__ability-txt,
-.section__skills
-  .skills__list-items.skills__list-zeplin
+.section__skills.active
+  .skills__list-items.skills__list-item70
   .skills__ability
   .skills__ability-txt {
   left: 70%;
+  animation: skillsTxtAni70 1s ease-out;
 }
-.section__skills
-  .skills__list-items.skills__list-js
-  .skills__ability
-  .skills__ability-txt,
-.section__skills
-  .skills__list-items.skills__list-xd
+.section__skills.active
+  .skills__list-items.skills__list-item60
   .skills__ability
   .skills__ability-txt {
   left: 60%;
+  animation: skillsTxtAni60 1s ease-out;
 }
 
 /* project */
@@ -353,9 +380,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  position: absolute;
-  width: 100vw;
-  left: calc(-36vw - 24px);
 }
 .section__project .project__list .project__list-items .project__img {
   background-color: #eedad1;

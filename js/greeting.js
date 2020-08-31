@@ -7,7 +7,7 @@ function checkTime() {
   const day = new Date();
   hours = day.getHours();
 }
-console.log(greeting);
+//console.log(greeting);
 
 function loadMessage() {
   checkTime();

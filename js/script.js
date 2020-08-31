@@ -1,16 +1,17 @@
 'use strict';
 
-const articles = document.querySelectorAll('article');
+const articles = document.querySelectorAll('article'),
+  wrapper = document.querySelector('.wrapper');
 
 let winHeight;
 let articlesPosY = [];
 
-console.log(articles);
+//console.log(articles);
 
 function windowHeight() {
   winHeight = window.innerHeight;
   slideHeight();
-  console.log(winHeight);
+  console.log(`windowHeight: ${winHeight}`);
 }
 
 function slideHeight() {
@@ -18,7 +19,10 @@ function slideHeight() {
   for (let i = 0; i < articles.length; i++) {
     articlesPosY.push(top);
     top = top + winHeight;
+    //articlesPosY.push(articles[i].getBoundingClientRect().top);
   }
+  //console.log(wrapper);
+  wrapper.style.height = winHeight;
 }
 windowHeight();
 
@@ -30,5 +34,21 @@ window.addEventListener('resize', () => {
 });
 
 window.addEventListener('scroll', () => {
-  console.log('scrolled', articlesPosY);
+  let scrollTop = window.scrollY;
+  //console.log(scrollTop, articlesPosY);
+
+  //console.log(window.scrollY);
+  for (let i = 0; i < articles.length; i++) {
+    let currentArticle = articles[i].getBoundingClientRect().top;
+    console.log(
+      `scrollTop: ${scrollTop}, ${i}: ${currentArticle}, ${
+        scrollTop - currentArticle
+      }`
+    );
+    if (scrollTop - currentArticle > 0) {
+      articles[i].classList.add('active');
+    } else {
+      articles[i].classList.remove('active');
+    }
+  }
 });
