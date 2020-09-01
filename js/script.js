@@ -1,6 +1,7 @@
 'use strict';
 
-const articles = document.querySelectorAll('article'),
+const section = document.querySelector('#section'),
+  articles = document.querySelectorAll('article'),
   wrapper = document.querySelector('.wrapper');
 
 let winHeight;
@@ -33,9 +34,9 @@ window.addEventListener('resize', () => {
   //console.log('resize');
 });
 
-window.addEventListener('scroll', () => {
-  let scrollTop = window.scrollY;
-  //console.log(scrollTop, articlesPosY);
+section.addEventListener('scroll', () => {
+  let scrollTop = section.scrollTop;
+  console.log(scrollTop, articlesPosY);
 
   //console.log(window.scrollY);
   for (let i = 0; i < articles.length; i++) {
