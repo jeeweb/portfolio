@@ -1,8 +1,8 @@
 'use strict';
 
-const section = document.querySelector('#section'),
-  articles = document.querySelectorAll('article'),
-  wrapper = document.querySelector('.wrapper');
+const wrapper = document.querySelector('.wrapper'),
+  section = document.querySelector('#section'),
+  articles = document.querySelectorAll('article');
 
 let winHeight;
 let articlesPosY = [];
