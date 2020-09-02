@@ -74,6 +74,15 @@
   }
 }
 
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 /* color
 #383e56
 #f69e7b
@@ -378,7 +387,8 @@
   opacity: 0;
   transition: opacity 1s;
 }
-.section__project .project__list-box.visible {
+.section__project.active .project__list-box.visible {
+  animation: fadeIn 1s ease;
   opacity: 1;
 }
 .section__project .project__list .project__list-items {
