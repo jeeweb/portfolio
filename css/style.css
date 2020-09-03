@@ -401,6 +401,11 @@
   background-color: #eedad1;
   height: 80vh;
   width: 36vw;
+  overflow: hidden;
+}
+.section__project .project__list .project__list-items .project__img img {
+  height: 100%;
+  transform: translateX(-32%);
 }
 .section__project .project__list .project__list-items .project__desc {
   position: relative;
@@ -427,8 +432,12 @@
   .project__list-title {
   padding-top: 0;
 }
+.section__project .project__list .project__list-desc {
+  line-height: 1.6;
+}
 .section__project .project__list .project__list-lang {
   font-weight: bold;
+  line-height: 1.6;
   margin: 0.5rem 0;
 }
 .section__project .project__list .project__list-link .link {
