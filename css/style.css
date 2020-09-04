@@ -382,19 +382,21 @@
   overflow: auto;
 }
 .section__project .project__list-box {
-  position: relative;
   height: 100vh;
   opacity: 0;
   transition: opacity 1s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .section__project.active .project__list-box.visible {
   animation: fadeIn 1s ease;
   opacity: 1;
 }
 .section__project .project__list .project__list-items {
+  width: 70%;
   height: 100vh;
   display: flex;
-  justify-content: center;
   align-items: center;
 }
 .section__project .project__list .project__list-items .project__img {
@@ -405,8 +407,22 @@
 }
 .section__project .project__list .project__list-items .project__img img {
   height: 100%;
-  transform: translateX(-32%);
 }
+.section__project
+  .project__list
+  .project__list-box.project-surf
+  .project__img
+  img {
+  transform: translateX(-31%);
+}
+.section__project
+  .project__list
+  .project__list-box.project-illy
+  .project__img
+  img {
+  transform: translateX(-23%);
+}
+
 .section__project .project__list .project__list-items .project__desc {
   position: relative;
   margin-left: 120px;

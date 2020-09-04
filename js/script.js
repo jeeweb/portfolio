@@ -2,7 +2,9 @@
 
 const wrapper = document.querySelector('.wrapper'),
   section = document.querySelector('#section'),
-  articles = document.querySelectorAll('article');
+  articles = document.querySelectorAll('article'),
+  sectionProject = document.querySelector('.section__project'),
+  projects = sectionProject.querySelectorAll('.project__list-box');
 
 let winHeight;
 let articlesPosY = [];
@@ -23,14 +25,17 @@ function slideHeight() {
 
   wrapper.style.height = winHeight;
 }
+
 windowHeight();
 
+/* 브라우저 크기 변경 시 */
 window.addEventListener('resize', () => {
   windowHeight();
   articlesPosY = [];
   slideHeight();
 });
 
+/* 브라우저 스크롤 */
 section.addEventListener('scroll', () => {
   let scrollTop = section.scrollTop;
   //console.log(scrollTop, articlesPosY);
@@ -41,11 +46,33 @@ section.addEventListener('scroll', () => {
     if (scrollTop - currentArticle > 0) {
       articles[i].classList.add('active');
 
-      if (articles[i].classList.contains('section__project')) {
-        articles[i].querySelector('.project1').classList.add('visible');
+      if (articles[i] === sectionProject) {
+        projects[0].classList.add('visible');
       }
     } else {
       articles[i].classList.remove('active');
+    }
+  }
+});
+
+/* 프로젝트 스크롤 */
+sectionProject.addEventListener('scroll', () => {
+  let scrollTop = sectionProject.scrollTop;
+
+  for (let i = 0; i < projects.length; i++) {
+    let current = projects[i];
+    //prev = num && projects[num - 1];
+    let currentTop = current.getBoundingClientRect().top;
+    //prevTop = prev.getBoundingClientRect().top;
+
+    console.log(i, -(winHeight / 2), currentTop, winHeight / 2);
+    if (-(winHeight / 2) < currentTop < winHeight / 2) {
+      current.classList.add('visible');
+      console.log('visible!');
+    } else if (currentTop < -(winHeight / 2)) {
+      console.log('hide!');
+      current.classList.remove('visible');
+      num = num + 1;
     }
   }
 });
