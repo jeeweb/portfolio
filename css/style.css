@@ -380,6 +380,7 @@
   display: block;
   height: 100%;
   overflow: auto;
+  scroll-snap-type: y mandatory;
 }
 .section__project .project__list-box {
   height: 100vh;
@@ -388,9 +389,16 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  scroll-snap-align: start;
 }
-.section__project.active .project__list-box.visible {
-  animation: fadeIn 1s ease;
+
+#show-project-0.section__project .project__list-box.project0,
+#show-project-1.section__project .project__list-box.project1,
+#show-project-2.section__project .project__list-box.project2,
+#show-project-3.section__project .project__list-box.project3,
+#show-project-4.section__project .project__list-box.project4
+{
+  animation: fadeIn 0.6s ease;
   opacity: 1;
 }
 .section__project .project__list .project__list-items {
@@ -402,7 +410,7 @@
 .section__project .project__list .project__list-items .project__img {
   background-color: #eedad1;
   height: 80vh;
-  width: 36vw;
+  width: 500px;
   overflow: hidden;
 }
 .section__project .project__list .project__list-items .project__img img {
@@ -421,6 +429,13 @@
   .project__img
   img {
   transform: translateX(-23%);
+}
+.section__project
+  .project__list
+  .project__list-box.project-tripplanner
+  .project__img
+  img {
+  transform: translateX(-15%);
 }
 
 .section__project .project__list .project__list-items .project__desc {
