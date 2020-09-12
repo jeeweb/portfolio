@@ -437,6 +437,13 @@
   img {
   transform: translateX(-15%);
 }
+.section__project
+  .project__list
+  .project__list-box.project-dive
+  .project__img
+  img {
+  transform: translateX(-28%);
+}
 
 .section__project .project__list .project__list-items .project__desc {
   position: relative;
@@ -488,56 +495,3 @@
   top: 1px;
   background: #888;
 }
-
-/* #section .section__project{
-    flex-direction: column;
-    justify-content: flex-start;
-}
-.section__project .section-title{
-    align-self: flex-start;
-}
-.section__project .project__list{
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    height: 46vh;
-    margin-top: 36px;
-}
-.section__project .project__list .project__list-items {
-    border-radius: 8px;
-    box-sizing: border-box;
-    width: 30vw;
-    height: 100%;
-    padding: 16px;
-    margin: 0 16px;
-    box-shadow: -1px -1px 4px #e4e4e4,4px 0px 22px #bbb, inset -5px -5px 18px #ddd, inset 5px 5px 4px #fff;
-}
-.section__project .project__list .project__list-title {
-    padding-top: 60%;
-    font-size: 2.4rem;
-    font-weight: bold;
-    font-family: 'Open Sans';
-    margin-bottom: .5rem;
-}
-.section__project .project__list .project__list-lang{
-    font-weight: bold;
-    margin: .5rem 0;
-}
-.section__project .project__list .project__list-link .link{
-    font-size: .8rem;
-    text-decoration: underline;
-}
-.section__project .project__list .project__list-link .link__github{
-    margin-left: 8px;
-    position: relative;
-}
-.section__project .project__list .project__list-link .link__github:before{
-    content: "";
-    position: absolute;
-    width: 2px;
-    height: 14px;
-    left: -6px;
-    top: 1px;
-    background: #888;
-}
- */
