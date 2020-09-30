@@ -258,6 +258,12 @@
 #section article.section__greetings {
   padding-left: calc(32vw + 24px);
 }
+
+.section__greetings .section__greetings-list .section__greetings-clock {
+	font-size: 1.6em;
+	margin-left: -194px;
+	color: #eedad1;
+}
 .section__greetings .section__greetings-list .section__greetings-msg {
   font-size: 6rem;
   font-family: 'Courgette';
