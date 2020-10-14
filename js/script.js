@@ -75,7 +75,7 @@ sectionProject.addEventListener('scroll', () => {
   for(let i = 0; i < projects.length; i++) {
     totalScrollHeight += projects[i].scrollHeight;
     if (totalScrollHeight - 100 >= scrollTop) {
-      console.log(totalScrollHeight, scrollTop)
+      // console.log(totalScrollHeight, scrollTop)
       currentProject = i;
       break;
     }
