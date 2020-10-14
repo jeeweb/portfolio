@@ -12,7 +12,7 @@ let articlesPosY = [];
 function windowHeight() {
   winHeight = window.innerHeight;
   slideHeight();
-  console.log(`windowHeight: ${winHeight}`);
+  // console.log(`windowHeight: ${winHeight}`);
 }
 
 function slideHeight() {
@@ -41,7 +41,7 @@ window.addEventListener('resize', () => {
 /* 브라우저 스크롤 */
 section.addEventListener('scroll', () => {
   let scrollTop = section.scrollTop;
-  console.log(`section: ${scrollTop}`);
+  // console.log(`section: ${scrollTop}`);
 
   for (let i = 0; i < articles.length; i++) {
     let currentArticle = articles[i].getBoundingClientRect().top;
@@ -70,7 +70,7 @@ sectionProject.addEventListener('scroll', () => {
   let currentProject = 0;  
   let scrollTop = sectionProject.scrollTop;
   let totalScrollHeight = 0;
-  console.log(`project: ${scrollTop}`);
+  // console.log(`project: ${scrollTop}`);
   
   for(let i = 0; i < projects.length; i++) {
     totalScrollHeight += projects[i].scrollHeight;
@@ -80,7 +80,7 @@ sectionProject.addEventListener('scroll', () => {
       break;
     }
   }
-  console.log(`current: ${currentProject}`)
+  // console.log(`current: ${currentProject}`)
   sectionProject.setAttribute('id', `show-project-${currentProject}`);
   
   /* for (let i = 0; i < projects.length; i++) {
