@@ -12,7 +12,20 @@ function checkTime() {
 	hours = day.getHours();
 	minutes = day.getMinutes();
 	sec = day.getSeconds();
-	console.log(hours, minutes, sec)
+
+	if (minutes < 10) {
+		minutes = '0' + minutes;
+	} else if (minutes === 0) {
+		minutes = '00';
+	}
+
+	if (sec < 10) {
+		sec = '0' + sec;
+	} else if (sec === 0) {
+		sec = '00';
+	}
+
+	// console.log(hours, minutes, sec)
 }
 //console.log(greeting);
 
@@ -23,7 +36,8 @@ function showClock() {
 }
 
 function loadMessage() {
-	showClock();
+	setInterval(() => {showClock()}, 1000)
+	checkTime();
   if (hours <= 12) {
     greeting[0].style.display = 'block';
   } else if (hours < 18) {
