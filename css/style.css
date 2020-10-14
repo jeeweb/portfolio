@@ -519,6 +519,7 @@
 		font-size: 4rem;
 	}
 	.section__greetings .section__greetings-list .section__greetings-msg p{
+		margin-left: -174px;
 	}
 	.section__greetings .section__greetings-list .section__greetings-text{
 		font-size: 1.4rem;
