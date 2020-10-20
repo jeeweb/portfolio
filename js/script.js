@@ -21,8 +21,9 @@ function slideHeight() {
   for (let i = 0; i < articles.length; i++) {
     articlesPosY.push(top);
     top = top + winHeight;
+		//console.log(`top: ${top}`);
   }
-
+	//console.log(`winHeight: ${winHeight}`);
   wrapper.style.height = winHeight;
 }
 
@@ -41,7 +42,7 @@ window.addEventListener('resize', () => {
 /* 브라우저 스크롤 */
 section.addEventListener('scroll', () => {
   let scrollTop = section.scrollTop;
-  // console.log(`section: ${scrollTop}`);
+  console.log(`section: ${scrollTop}`);
 
   for (let i = 0; i < articles.length; i++) {
     let currentArticle = articles[i].getBoundingClientRect().top;
@@ -75,7 +76,8 @@ sectionProject.addEventListener('scroll', () => {
   for(let i = 0; i < projects.length; i++) {
     totalScrollHeight += projects[i].scrollHeight;
     if (totalScrollHeight - 100 >= scrollTop) {
-      // console.log(totalScrollHeight, scrollTop)
+      // console.log(`totalScrollHeight : ${totalScrollHeight}`)
+      // console.log(`scrollTop : ${scrollTop}`)
       currentProject = i;
       break;
     }
