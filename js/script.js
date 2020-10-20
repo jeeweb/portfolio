@@ -45,8 +45,8 @@ section.addEventListener('scroll', () => {
 
   for (let i = 0; i < articles.length; i++) {
     let currentArticle = articles[i].getBoundingClientRect().top;
-
-    if (scrollTop - currentArticle > 0) {
+		// console.log(i, currentArticle, scrollTop)
+    if (currentArticle + scrollTop > 0 && currentArticle + scrollTop > Math.abs(currentArticle)) {
       articles[i].classList.add('active');
 
       if (articles[i] === sectionProject) {
