@@ -1,61 +1,4 @@
-@charset "UTF-8";
-@import url('https://fonts.googleapis.com/css2?family=Galada&family=Nanum+Myeongjo:wght@400;800&Nanum+Gothic:wght@400;700&family=Open+Sans:wght@400;700&family=Courgette&display=swap');
-
-/* color
-#383e56
-#f69e7b
-#eedad1
-#d4b5b0
-*/
-
-/* tag reset */
-html,
-body {
-  height: 100%;
-}
-* {
-  padding: 0;
-  margin: 0;
-}
-body {
-  font-family: 'Nanum Gothic', 'Open Sans', sans-serif, 'Malgun Gothic',
-    '맑은 고딕';
-  color: #383e56;
-  background-color: #383e56;
-  overscroll-behavior: none;
-}
-h1,
-h2,
-h3,
-h4,
-h5 {
-  font-weight: normal;
-}
-ul {
-  list-style: none;
-}
-a:link,
-a:visited,
-a:hover,
-a:active {
-  text-decoration: none;
-  color: inherit;
-}
-button {
-  cursor: pointer;
-  border: 0;
-  color: inherit;
-  font-size: inherit;
-  font-family: inherit;
-  background: none;
-  outline: none;
-}
-img {
-  vertical-align: middle;
-  height: auto;
-}
-
-/* common style */
+/* common class */
 .blind {
   position: absolute;
   top: 0;
@@ -66,4 +9,19 @@ img {
   line-height: 0;
   font-size: 0;
   overflow: hidden;
+}
+
+
+/* btn__close */
+.btn__close .btn__close-icon {
+  position: relative;
+  height: 100%;
+}
+.btn__close .btn__close-icon .btn__close-bar {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: #222;
+  transition: all 0.5s;
 }

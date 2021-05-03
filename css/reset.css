@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Galada&family=Noto+Sans+KR:wght@300;400;700&family=Open+Sans:wght@400;700&family=Courgette&display=swap');
+
+
+/* tag reset */
+html,
+body {
+  height: 100%;
+}
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  font-family: 'Noto Sans KR', 'Open Sans', sans-serif, 'Malgun Gothic',
+    '맑은 고딕';
+  color: #222;
+  background-color: #F3F3F3;
+  overscroll-behavior: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-weight: normal;
+}
+ul {
+  list-style: none;
+}
+a:link,
+a:visited,
+a:hover,
+a:active {
+  text-decoration: none;
+  color: inherit;
+}
+button {
+  cursor: pointer;
+  border: 0;
+  color: inherit;
+  font-size: inherit;
+  font-family: inherit;
+  background: none;
+  outline: none;
+}
+img {
+  vertical-align: middle;
+  height: auto;
+}
