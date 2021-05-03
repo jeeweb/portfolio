@@ -1,6 +1,6 @@
 'use strict';
 
-const greeting = document.querySelectorAll('.section__greetings-msg > p'),
+const greeting = document.querySelectorAll('.section__greetings-msg > li'),
 		clock = document.querySelector('.section__greetings-clock');
 let hours;
 let minutes;
@@ -38,6 +38,7 @@ function showClock() {
 function loadMessage() {
 	setInterval(() => {showClock()}, 1000)
 	checkTime();
+	console.log(greeting)
   if (hours <= 12) {
     greeting[0].style.display = 'block';
   } else if (hours < 18) {

@@ -72,6 +72,14 @@
     opacity: 1;
   }
 }
+@keyframes stretch100 {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
 
 
 /* wrapper */
@@ -82,7 +90,7 @@
 }
 
 /* header */
-.header .header__logo {
+.logo {
   font-family: 'Galada'; 
 }
 .header .btn__nav {
@@ -122,24 +130,60 @@
 }
 .nav.nav--show{
 	display: block;
+	position: fixed;
+	top: 0;
+	right: 0;
+	height: 100vh;
+	width: 680px;
+	padding: 32px;
+	background-color: #fff;
+	box-shadow: -2px 0 15px rgba(136, 136, 136, .2);
+	box-shadow: border-box;
 }
 
-.nav.nav--show
+.nav .logo{
+	position: fixed;
+	top: 40px;
+	left: 40px;
+	font-size: 2em;
+}
+.nav
   .btn__close
   .btn__close-icon
   .btn__close-bar:first-child {
   transform-origin: top left;
-  transform: translateY(-1px) rotate(45deg);
-	animation: fadeIn 0.6s;
+  transform: rotate(45deg);
+	opacity: 0;
 }
-.nav.nav--show
+.nav
   .btn__close
   .btn__close-icon
   .btn__close-bar:last-child {
-	transform-origin: bottom left;
-	transform: translateY(1px) rotate(-45deg);
+	transform-origin: top left;
+	transform: rotate(135deg);
+	opacity: 0;
+}
+
+.nav.nav--show .btn__close .btn__close-bar:first-child{
 	animation: fadeIn 0.6s;
-  
+	animation: stretch100 0.6s;
+	opacity: 1;
+}
+.nav.nav--show .btn__close .btn__close-bar:last-child{
+	animation: fadeIn 0.6s 0.6s;
+	animation: stretch100 0.6s 0.6s;
+	opacity: 1;
+}
+
+
+
+/* greetings */
+.section__greetings-list .section__greetings-msg li {
+  display: none;
+}
+.section__greetings-list .section__greetings-text {
+  font-size: 1.6rem;
+  line-height: 1.6;
 }
 
 .footer {
@@ -179,32 +223,7 @@
   scroll-snap-align: start;
 }
 
-/* greetings */
-#section article.section__greetings {
-  padding-left: calc(32vw + 24px);
-}
 
-.section__greetings .section__greetings-list .section__greetings-clock {
-	font-size: 1.6em;
-	margin-left: -194px;
-	color: #eedad1;
-}
-.section__greetings .section__greetings-list .section__greetings-msg {
-  font-size: 6rem;
-  font-family: 'Courgette';
-}
-.section__greetings .section__greetings-list .section__greetings-msg p {
-  display: none;
-  margin-left: -242px;
-  letter-spacing: -2px;
-}
-.section__greetings .section__greetings-list .section__greetings-msg p span {
-  color: #eedad1;
-}
-.section__greetings .section__greetings-list .section__greetings-text {
-  font-size: 1.6rem;
-  line-height: 1.6;
-}
 
 /* skills */
 #section article.section__skills {

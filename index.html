@@ -11,41 +11,20 @@
 </head>
 
 <body>
-	<div id="skip">
-		<a href="#section">본문바로가기</a>
-	</div>
 	<div class="wrapper">
 		<header class="header">
 			<h1 class="header__logo">
 				<span class="logo">Jee's</span>
 			</h1>
-			<!-- <div class="header__navigation">
-				<button type="button" class="btn btn__nav">
-					<span class="btn__nav-icon">
-						<span class="btn__nav-bar"></span>
-						<span class="btn__nav-bar"></span>
-						<span class="btn__nav-bar"></span>
-					</span>
-					<span class="blind">프로젝트목록</span>
-				</button>
-			</div> -->
+			<button type="button" class="btn btn__nav">
+				<p class="btn__nav-icon">
+					<span class="btn__nav-bar"></span>
+					<span class="btn__nav-bar"></span>
+				</p>
+			</button>
 		</header>
 		<section id="section" class="section">
-			<article class="section__greetings">
-				<div class="section__greetings-list">
-					<p class="section__greetings-clock"></p>
-					<h3 class="section__greetings-msg">
-						<p><span>Good</span> Morning 🌱</p>
-						<p><span>Good</span> Afternoon 🌼</p>
-						<p><span>Good</span> Evening 🌙</p>
-					</h3>
-					<h4 class="section__greetings-text">
-						<p>I'M JIEE KONG</p>
-						<p>웹퍼블리셔 <span>공지이</span> 입니다.</p>
-					</h4>
-				</div>
-				<div class="section__greetings-img"></div>
-			</article>
+
 			<article class="section__skills">
 				<h2 class="section-title blind">What I can do</h2>
 				<div class="section__skills-wrap">
@@ -252,20 +231,44 @@
 		</section>
 		<footer class="footer">
 			<ul class="footer__links">
-				<li class="footer__link-git">
-					<a href="https://github.com/jeeweb" class="btn btn__github">
-						<i class="fab fa-github"></i>
-					</a>
-				</li>
 				<li class="footer__link-mail">
 					<a href="mailto:jee.vvvv@gmail.com" class="btn btn__email">
 						<i class="fas fa-envelope"></i>
+					</a>
+				</li>
+				<li class="footer__link-git">
+					<a href="https://github.com/jeeweb" class="btn btn__github">
+						<i class="fab fa-github"></i>
 					</a>
 				</li>
 			</ul>
 
 			<p class="footer__copyright">COPYRIGHT JIEE KONG, ALL RIGHT RESERVED</p>
 		</footer>
+
+		<nav class="nav">
+			<div class="nav__top">
+				<p class="logo">Jee's</p>
+				<button type="button" class="btn btn__close">
+					<p class="btn__close-icon">
+						<span class="btn__close-bar"></span>
+						<span class="btn__close-bar"></span>
+					</p>
+				</button>
+			</div>
+
+			<div class="nav__bottom">
+				<div class="section__greetings-list">
+					<p class="section__greetings-clock"></p>
+					<ul class="section__greetings-msg">
+						<li><span>Good</span> Morning 🌱</li>
+						<li><span>Good</span> Afternoon 🌼</li>
+						<li><span>Good</span> Evening 🌙</li>
+					</ul>
+				</div>
+			</div>
+
+		</nav>
 
 		<script src="js/script.js"></script>
 		<script src="js/greeting.js"></script>

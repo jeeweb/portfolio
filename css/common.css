@@ -13,15 +13,32 @@
 
 
 /* btn__close */
+.btn__close{
+	position: absolute; 
+	width: 24px;
+	height: 24px;
+}
 .btn__close .btn__close-icon {
   position: relative;
   height: 100%;
 }
 .btn__close .btn__close-icon .btn__close-bar {
   position: absolute;
-  left: 0;
-  right: 0;
+  width: 26px;
   height: 2px;
   background-color: #222;
-  transition: all 0.5s;
+}
+.btn__close .btn__close-icon .btn__close-bar:first-child{
+	top: 3px;
+	left: 4px;
+}
+.btn__close .btn__close-icon .btn__close-bar:last-child{
+	top: 4px;
+	left: 22px;
+}
+.nav .btn__close{
+	top: 40px;
+	right: 40px;
+	width: 26px;
+	height: 24px;
 }

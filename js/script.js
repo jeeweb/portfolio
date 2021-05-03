@@ -1,10 +1,13 @@
 'use strict';
 
 const wrapper = document.querySelector('.wrapper'),
-  section = document.querySelector('#section'),
+btnNav = document.querySelector('.btn__nav'),
+section = document.querySelector('#section'),
   articles = document.querySelectorAll('article'),
   sectionProject = document.querySelector('.section__project'),
-  projects = sectionProject.querySelectorAll('.project__list-box');
+  projects = sectionProject.querySelectorAll('.project__list-box'),
+	nav = document.querySelector('.nav'),
+	btnClose = document.querySelector('.btn__close');
 
 let winHeight;
 let articlesPosY = [];
@@ -26,6 +29,8 @@ function slideHeight() {
 	//console.log(`winHeight: ${winHeight}`);
   wrapper.style.height = winHeight;
 }
+
+
 
 window.addEventListener('load', () => {
   addProjectClass();
@@ -102,3 +107,11 @@ sectionProject.addEventListener('scroll', () => {
     }
   } */
 });
+
+/* Button Click Event */
+btnNav.addEventListener('click', () =>{
+	nav.classList.add('nav--show')
+})
+btnClose.addEventListener('click', () => {
+	
+})
