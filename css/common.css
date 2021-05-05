@@ -11,6 +11,15 @@
   overflow: hidden;
 }
 
+.section__title{
+	font-size: 4em;
+	font-weight: 700;
+	color: #fff;
+	-webkit-text-stroke: 1px #000;
+	position: -webkit-sticky;
+	position: sticky;
+	top: 40px;
+}
 
 /* btn__close */
 .btn__close{
