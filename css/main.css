@@ -73,23 +73,7 @@
 	font-size: 2em;
 }
 
-/* footer */
-.footer{
-	background-color: #222;
-	color: #fff;
-}
-.footer .footer__links {
-  display: flex;
-  font-size: 1.6rem;
-  margin-bottom: 10px;
-}
-.footer .footer__links li {
-  padding-right: 16px;
-}
-.footer .footer__copyright {
-  font-size: 0.8rem;
-  opacity: 0.5;
-}
+
 
 
 
@@ -144,6 +128,31 @@
 	opacity: 1;
 }
 
+/* section__my */
+.section__my{
+	height: calc(100vh - 100px);
+	display: flex;
+	justify-content: center;
+	align-items: center
+}
+.my__pic{
+	background: url(../images/avatar.png) no-repeat center/cover;
+}
+.my__pic,
+.my__greeting{
+	width: 400px;
+	height: 400px;
+}
+.my__greeting{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	font-size: 2.4rem;
+}
+.my__greeting{
+	cursor: url(../images/waving-hand.cur), default
+}
+
 /* skills */
 .skills-list{
 	display: flex;
@@ -155,197 +164,38 @@
 }
 
 /* project */
-#section .section__project {
-  display: block;
-  height: 100%;
-  overflow: auto;
-  scroll-snap-type: y mandatory;
-}
-.section__project .project__list-box {
-  height: 100vh;
-  opacity: 0;
-  transition: opacity 1s;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  scroll-snap-align: start;
-}
 
-#show-project-0.section__project .project__list-box.project0,
-#show-project-1.section__project .project__list-box.project1,
-#show-project-2.section__project .project__list-box.project2,
-#show-project-3.section__project .project__list-box.project3,
-#show-project-4.section__project .project__list-box.project4
-{
-  animation: fadeIn 0.6s ease;
-  opacity: 1;
-}
-.section__project .project__list .project__list-items {
-  width: 80%;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-}
-.section__project .project__list .project__list-items .project__img {
-  background-color: #eedad1;
-  height: 70vh;
-  width: 350px;
-  overflow: hidden;
-}
-.section__project .project__list .project__list-items .project__img img {
-  height: 100%;
-}
-.section__project
-  .project__list
-  .project__list-box.project-surf
-  .project__img
-  img {
-  transform: translateX(-31%);
-}
-.section__project
-  .project__list
-  .project__list-box.project-illy
-  .project__img
-  img {
-  transform: translateX(-23%);
-}
-.section__project
-  .project__list
-  .project__list-box.project-tripplanner
-  .project__img
-  img {
-  transform: translateX(-15%);
-}
-.section__project
-  .project__list
-  .project__list-box.project-dive
-  .project__img
-  img {
-  transform: translateX(-28%);
-}
 
-.section__project .project__list .project__list-items .project__desc {
-  position: relative;
-	margin-left: 90px;
-	width: 312px;
+/* footer */
+.footer{
+	box-sizing: border-box;
+	padding: 40px;
+	background-color: #222;
+	color: #fff;
 }
-/* .section__project .project__list .project__list-items .project__desc:before {
-  content: '';
-  position: absolute;
-  left: -220px;
-  top: 24px;
-  height: 4px;
-  width: 140px;
-  background-color: #f69e7b;
-} */
-.section__project .project__list .project__list-title {
-  font-size: 2.4rem;
-  font-weight: bold;
-  font-family: 'Open Sans';
-  margin-bottom: 0.5rem;
+.footer .footer__links {
+  display: flex;
+  font-size: 1.6rem;
+  margin-bottom: 10px;
 }
-.section__project
-  .project__list
-  .project__list-items:nth-child(2n)
-  .project__list-title {
-  padding-top: 0;
+.footer .footer__links li {
+  padding-right: 16px;
 }
-.section__project .project__list .project__list-desc {
-  line-height: 1.6;
-}
-.section__project .project__list .project__list-lang {
-  font-weight: bold;
-  line-height: 1.6;
-  margin: 0.5rem 0;
-}
-.section__project .project__list .project__list-link .link {
+.footer .footer__copyright {
   font-size: 0.8rem;
-  text-decoration: underline;
-}
-.section__project .project__list .project__list-link .link__github {
-  margin-left: 8px;
-  position: relative;
-}
-.section__project .project__list .project__list-link .link__github:before {
-  content: '';
-  position: absolute;
-  width: 2px;
-  height: 14px;
-  left: -6px;
-  top: 1px;
-  background: #888;
+  opacity: 0.8;
 }
 
 
 @media (max-width: 768px) {
-	.wrapper:after{
-		width: 72vw;
-	}
-
-	#section article.section__greetings,
-	#section article.section__skills{
-		padding-left: calc(28vw + 24px);
-	}
-	.section__greetings .section__greetings-list .section__greetings-clock{
-		font-size: 1.2rem;
-		margin-left: -164px;
-	}
-	.section__greetings .section__greetings-list .section__greetings-msg{
-		font-size: 4rem;
-	}
-	.section__greetings .section__greetings-list .section__greetings-msg p{
-		margin-left: -174px;
-	}
-	.section__greetings .section__greetings-list .section__greetings-text{
-		font-size: 1.4rem;
-	}
-
-	.section__skills .section__skills-wrap{
-		flex-direction: column;
-	}
-	.section__skills .section__skills-group{
-		width: 100%;
-	}
-	.section__skills .section__skills-group:last-child{
-		margin-left: 0;
-		margin-top: 8vw;
-	}
-
-	.section__project .project__list .project__list-items{
-		width: 100%;
-		flex-direction: column;
-	}
-	.section__project .project__list .project__list-items .project__img{
-		width: 100%;
-		height: 40%;
-		margin-top: 128px;
-	}
 	
-	.section__project .project__list .project__list-box .project__img img{
-		transform: translateX(0) !important;
-	}
-	
-	.section__project .project__list .project__list-box.project-illy .project__img img,
-	.section__project .project__list .project__list-box.project-tripplanner .project__img img{
-		width: 100%;
-		height: auto;
-	}
-	.section__project .project__list .project__list-items .project__desc{
-		align-self: flex-start;
-		margin-top: 24px;
-		margin-left: 32vw;
-	}
-	.section__project .project__list .project__list-items .project__desc:before{
-		background-color: transparent;
-	}
-
-
-/* footer */
+	/* footer */
 
 	.footer{
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
+		background-color: transparent;
 	}
 	.footer .footer__links{
 		margin-bottom: 0;

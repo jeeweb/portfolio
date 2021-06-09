@@ -12,13 +12,21 @@
 }
 
 .section__title{
-	font-size: 4em;
+	font-size: 3.6em;
 	font-weight: 700;
 	color: #fff;
 	-webkit-text-stroke: 1px #000;
 	position: -webkit-sticky;
 	position: sticky;
 	top: 40px;
+}
+
+.flex{
+	display: flex;
+}
+.flex-center{
+	display: flex;
+	align-items: center;
 }
 
 /* btn__close */
