@@ -30,15 +30,15 @@
 /* wrapper */
 .wrapper{
 	position: relative;
-	padding: 40px;
+	padding: 64px 160px;
 	box-sizing: border-box;
 }
 
 /* header */
 .header{
 	position: fixed;
-	top: 40px;
-	right: 40px;
+	top: 64px;
+	right: 160px;
 	z-index: 300;
 }
 .header .btn__nav{
@@ -70,12 +70,8 @@
 
 .logo {
   font-family: 'Galada'; 
-	font-size: 2em;
+	font-size: 2.6em;
 }
-
-
-
-
 
 /* navigation */
 .nav {
@@ -128,8 +124,23 @@
 	opacity: 1;
 }
 
+/* section */
+.section article{
+	height: 100vh
+}
+.section article + article{
+	margin-top: 144px;
+}
+
+article .section__cnt{
+	height: calc(100vh - 124px);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
 /* section__my */
-.section__my{
+.section .section__my{
 	height: calc(100vh - 100px);
 	display: flex;
 	justify-content: center;
@@ -153,44 +164,193 @@
 	cursor: url(../images/waving-hand.cur), default
 }
 
-/* skills */
-.skills-list{
-	display: flex;
-}
-.skills-list__item {
-	margin-right: 4em;
-	font-size: 2em;
-	font-weight: 400;
-}
 
 /* project */
+.section .section__project{
+	height: 100%;
+}
+.project__list-box{
+	height: 100vh;
+}
+.project__list-items{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.project__desc{
+	max-width: 50%;
+	box-sizing: border-box;
+}
+.project__list-desc{
+	margin: 24px 0;
+}
+.project__list-desc strong{
+	display: block;
+	font-size: 36px;
+	padding-bottom: 8px;
+}
+.project__list-lang{
+	color: #999;
+	font-size: 14px;
+}
+.project__list-link{
+	font-size: 14px;
+	margin-top: 16px;
+}
+.project__list-link a + a{
+	margin-left: 12px;
+}
+.project__img{
+	height: 72vh;
+	width: 50vh;
+	background-color: coral;
+}
+
+/* skills */
+.skills__list-box{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 64vw;
+}
+.skills__list-box + .skills__list-box {
+	margin-top: 64px;
+}
+
+.skill__item{
+	position: relative;
+	width: 120px;
+	height: 120px;
+	border-radius: 50%;
+	background-color: #fff;
+}
+.skill__item > img{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 72px;
+	height: auto;
+	transform: translate(-50%, -50%)
+}
+.skill__item .skill__item-num{
+	opacity: 0;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%)
+}
+.skill__item:hover .skill__item-mark{
+	opacity: 0;
+}
+.skill__item:hover .skill__item-num{
+	opacity: 1;
+}
+
+.skill__item-group{
+	opacity: 0;
+	position: absolute;
+	bottom: -40px;
+	width: 300%;
+	transition: opacity 0.6s;
+}
+.skill__item-group p{
+	text-align: center;
+}
+.skill__item:hover .skill__item-group {
+	opacity: 1;
+} 
 
 
 /* footer */
 .footer{
 	box-sizing: border-box;
 	padding: 40px;
-	background-color: #222;
+	background-color: #000;
 	color: #fff;
+	
 }
 .footer .footer__links {
   display: flex;
-  font-size: 1.6rem;
+	justify-content: center;
   margin-bottom: 10px;
 }
-.footer .footer__links li {
-  padding-right: 16px;
+.footer .footer__links li{
+	opacity: 0.4;
+	font-size: 1.4em;
+	transition: opacity 0.4s;
+}
+.footer .footer__links li:hover{
+	opacity: 1;
+}
+.footer .footer__links li + li {
+  margin-left: 16px;
 }
 .footer .footer__copyright {
   font-size: 0.8rem;
   opacity: 0.8;
+	text-align: center;
 }
 
+@media (max-width: 1200px) {
+	.wrapper{
+		padding: 48px 96px;
+	}
+	.header{
+		top: 48px;
+		right: 96px;
+	}
+	.section__project .section__cnt{
+		align-items:flex-start;
+		overflow-y: auto;
+	}
+	.project__list{
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 48px;
+		width: 100%;
+		margin-top: 48px;
+	}
+	.project__list-box{
+		height: auto;
+	}
+	.project__list-items{
+		flex-direction: column-reverse;
+	}
+	.project__desc{
+		max-width: none;
+		width: 100%;
+		margin-top: 24px;
+		text-align: center;
+	}
+	.project__list-desc{
+		margin: 0 0 12px;
+	}
+	.project__list-desc strong{
+		font-size: 26px;
+		padding-bottom: 4px;
+	}
+	.project__list-link{
+		margin-top: 10px;
+	}
+	.project__img{
+		width: 100%;
+		height: 360px;
+		border-radius: 24px;
+	}
+}
+
+@media (max-width: 960px) {
+	.skills__list{
+		width: 100%;
+	}
+	.skills__list-box{
+		width: 100%;
+	}
+}
 
 @media (max-width: 768px) {
 	
 	/* footer */
-
 	.footer{
 		display: flex;
 		align-items: center;
