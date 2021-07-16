@@ -19,6 +19,7 @@
 	position: -webkit-sticky;
 	position: sticky;
 	top: 40px;
+	z-index: 100;
 }
 
 .flex{
@@ -58,4 +59,35 @@
 	right: 40px;
 	width: 26px;
 	height: 24px;
+}
+
+
+/* footer */
+.footer{
+	box-sizing: border-box;
+	padding: 20px;
+	background-color: #000;
+	color: #fff;
+	
+}
+.footer .footer__links {
+  display: flex;
+	justify-content: center;
+  margin-bottom: 10px;
+}
+.footer .footer__links li{
+	opacity: 0.4;
+	font-size: 1.4em;
+	transition: opacity 0.4s;
+}
+.footer .footer__links li:hover{
+	opacity: 1;
+}
+.footer .footer__links li + li {
+  margin-left: 16px;
+}
+.footer .footer__copyright {
+  font-size: 0.8rem;
+  opacity: 0.8;
+	text-align: center;
 }

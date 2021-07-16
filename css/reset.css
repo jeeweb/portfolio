@@ -11,11 +11,9 @@ body {
   margin: 0;
 }
 body {
-  font-family: 'Noto Sans KR', 'Open Sans', sans-serif, 'Malgun Gothic',
-    '맑은 고딕';
+  font-family: 'Noto Sans KR', 'Open Sans', sans-serif, 'Malgun Gothic', '맑은 고딕';
   color: #222;
   background-color: #F3F3F3;
-  overscroll-behavior: none;
 }
 h1,
 h2,
