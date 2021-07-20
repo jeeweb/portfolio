@@ -128,18 +128,18 @@
 /* .section article{
 	height: 100vh
 } */
-.section article + article{
+.section-wrap section + section{
 	margin-top: 144px;
 }
 
-article .section__cnt{
+section .section__cnt{
 	min-height: calc(100vh - 124px);
 	display: flex;
 	justify-content: center;
 }
 
 /* section__my */
-.section .section__my{
+.section-wrap .section__my{
 	height: calc(100vh - 100px);
 	display: flex;
 	justify-content: center;
@@ -165,9 +165,74 @@ article .section__cnt{
 	font-size: 2.4rem;
 }
 
-
 /* project */
-.section .section__project:before{
+.scroll__images{
+	position: sticky;
+	top: 0;
+	height: 100vh;
+}
+.project__image{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	transition: 0.5s opacity;
+}
+.project__image.visible{
+	opacity: 1;
+}
+.project__image > img{
+	max-height: 100vh;
+}
+.scroll__text{
+	position: relative;
+	padding-bottom: 1px;
+}
+.project__desc {
+	color: #fff;
+	max-width: 50%;
+	box-sizing: border-box;
+	margin-bottom: 60vh;
+}
+.project__list-desc{
+	margin: 24px 0;
+}
+.project__list-desc strong{
+	display: block;
+	font-size: 36px;
+	padding-bottom: 8px;
+}
+.project__list-lang{
+	color: #999;
+	font-size: 14px;
+}
+.project__list-link{
+	font-size: 14px;
+	margin-top: 16px;
+}
+.project__list-link a + a{
+	margin-left: 12px;
+}
+
+/* project - v1*/
+
+/* image gradient mask effect
+ .project__list-box{
+	background-color: #000;
+}
+.project__list-items{
+	height: 100vh;
+	background-image: url("../images/project-genesis.jpg");
+	-webkit-mask-image: -webkit-gradient(linear, right center, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0.5)));
+} */
+
+/* 
+.section-wrap .section__project:before{
 	content: "";
 	position: sticky;
 	display: block;
@@ -178,7 +243,7 @@ article .section__cnt{
 	backdrop-filter: blur(10px);
 	z-index: 80;
 }
-.section .section__project{
+.section-wrap .section__project{
 	position: relative;
 	height: 100%;
 }
@@ -196,14 +261,6 @@ article .section__cnt{
 	align-items: center;
 	justify-content: space-between;
 }
-/* .project__list-box{
-	background-color: #000;
-}
-.project__list-items{
-	height: 100vh;
-	background-image: url("../images/project-genesis.jpg");
-	-webkit-mask-image: -webkit-gradient(linear, right center, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0.5)));
-} */
 .project__desc{
 	max-width: 50%;
 	box-sizing: border-box;
@@ -260,7 +317,7 @@ article .section__cnt{
 	width: 25vw;
 	background-color: #fff;
 }
-
+ */
 
 /* skills */
 .section__skills .section__title{
