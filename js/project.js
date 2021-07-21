@@ -26,7 +26,7 @@
 	window.addEventListener('scroll', () => {
 		let project;
 		let boundingRect;
-		let winHeight = window.innerHeight;
+		const winHeight = window.innerHeight;
 
 		for (let i = ioIndex - 1; i < ioIndex + 2; i++) {
 			project = projectDesc[i];
@@ -43,5 +43,10 @@
 				activate();
 			}
 		}
+	});
+	
+	window.addEventListener('load', () => {
+		setTimeout(() => scrollTo(0, 0));
 	})
+
 })();

@@ -62,6 +62,16 @@
 }
 
 
+/* wrapper */
+.wrapper{
+	position: relative;
+	box-sizing: border-box;
+}
+.inner{
+	padding: 64px 160px;
+}
+
+
 /* footer */
 .footer{
 	box-sizing: border-box;

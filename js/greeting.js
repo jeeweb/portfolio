@@ -38,7 +38,7 @@ function showClock() {
 function loadMessage() {
 	setInterval(() => {showClock()}, 1000)
 	checkTime();
-	console.log(greeting)
+	// console.log(greeting)
   if (hours <= 12) {
     greeting[0].style.display = 'block';
   } else if (hours < 18) {
