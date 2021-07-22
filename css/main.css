@@ -15,7 +15,7 @@
 .header{
 	position: fixed;
 	top: 64px;
-	right: 160px;
+	left: 160px;
 	z-index: 300;
 }
 .header .btn__nav{
@@ -46,9 +46,13 @@
 }
 
 .logo {
+	position: sticky;
+	top: 48px;
   font-family: 'Galada'; 
-	font-size: 2.6em;
-	margin: 64px 0 0 160px; 
+	font-size: 2em;
+	margin-right: 160px;
+	text-align: right;
+	z-index: 300;
 }
 
 /* navigation */
@@ -162,7 +166,7 @@ section .section__cnt{
 	top: 10vh;
 	width: 700px;
 	height: 520px;
-	border-radius: 24px;
+	border-radius: 16px;
 }
 .project__image:first-child{
 	justify-content:flex-start
@@ -202,106 +206,6 @@ section .section__cnt{
 .project__list-link a + a{
 	margin-left: 12px;
 }
-
-/* project - v1*/
-
-/* image gradient mask effect
- .project__list-box{
-	background-color: #000;
-}
-.project__list-items{
-	height: 100vh;
-	background-image: url("../images/project-genesis.jpg");
-	-webkit-mask-image: -webkit-gradient(linear, right center, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0.5)));
-} */
-
-/* 
-.section-wrap .section__project:before{
-	content: "";
-	position: sticky;
-	display: block;
-	top: 0;
-	width: 40vw;
-	height: 164px;
-	margin-left: -160px;
-	backdrop-filter: blur(10px);
-	z-index: 80;
-}
-.section-wrap .section__project{
-	position: relative;
-	height: 100%;
-}
-.section__project .section__cnt{
-	flex-direction: column;
-}
-.project__list{
-	width: 100%;
-}
-.project__list-box{
-	height: 100vh;
-}
-.project__list-items{
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-}
-.project__desc{
-	max-width: 50%;
-	box-sizing: border-box;
-}
-.project__list-desc{
-	margin: 24px 0;
-}
-.project__list-desc strong{
-	display: block;
-	font-size: 36px;
-	padding-bottom: 8px;
-}
-.project__list-lang{
-	color: #999;
-	font-size: 14px;
-}
-.project__list-link{
-	font-size: 14px;
-	margin-top: 16px;
-}
-.project__list-link a + a{
-	margin-left: 12px;
-}
-.project__img{
-	height: 72vh;
-	width: 60vh;
-	overflow: hidden;
-	background-color: #999;
-}
-.project__img img{
-	height: 100%;
-	width: auto;
-}
-.project__dive .project__img img{
-	margin-left: -80%;
-}
-.project__kt .project__img img{
-	margin-left: -38%;
-}
-
-.project__list--horizontal{
-	overflow-x: auto;
-	display: flex;
-}
-.project__list--horizontal .project__desc{
-	text-align: center;
-}
-.project__list--horizontal .project__list-items{
-	height: 100%;
-	flex-direction: column;
-	justify-content: center;
-}
-.project__list--horizontal .project__list-box{
-	width: 25vw;
-	background-color: #fff;
-}
- */
 
 /* skills */
 .section__skills .section__title{
@@ -374,13 +278,6 @@ section .section__cnt{
 .skill__item .inner-area{
 	width: 110px;
 	height: 170px;
-	/* background-color: #aaa;
-	background-image: linear-gradient(45deg, #ddd 25%, transparent 25%, transparent 75%, #ddd 75%, #ddd), linear-gradient(-45deg, #ddd 25%, transparent 25%, transparent 75%, #ddd 75%, #ddd);
-  background-size: 10px 10px; */
-	/* background-color: #888;
-  background-image: radial-gradient(closest-side, transparent 98%, #444 100%), radial-gradient(closest-side, transparent 98%, #444 100%);
-  background-position: 0 0, 15px 15px;
-  background-size: 10px 10px; */
 	background-color: #eee;
   background-image: linear-gradient(115deg, transparent 75%, #fff 75%), linear-gradient(245deg, transparent 75%, #fff 75%), linear-gradient(115deg, transparent 75%, #fff 75%), linear-gradient(245deg, transparent 75%, #fff 75%);
   background-position: 0 0, 0 0, 5px -10px, 5px -10px;
@@ -424,6 +321,12 @@ section .section__cnt{
 		right: 96px;
 	}
 
+	.logo{
+		top: 18px;
+		margin-right: 0;
+		text-align: center;
+	}
+
 	.section article:before{
 		margin-left: -96px;
 	}
@@ -460,10 +363,12 @@ section .section__cnt{
 	.project__list-link{
 		margin-top: 10px;
 	}
-	.project__img{
-		width: 100%;
-		height: 360px;
-		border-radius: 24px;
+	.project__image{
+		height: 300px;
+		width: 500px;
+		top: 72px;
+		right: 50%;
+		transform: translateX(50%)
 	}
 }
 

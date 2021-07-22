@@ -101,3 +101,28 @@
   opacity: 0.8;
 	text-align: center;
 }
+
+@media (max-width: 1200px) {
+	.section__title{
+		text-align: center;
+	}
+}
+
+@media (max-width: 768px) {
+	
+	/* footer */
+	.footer{
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		background-color: transparent;
+	}
+	.footer .footer__links{
+		margin-bottom: 0;
+	}
+	.footer .footer__copyright{
+		color: #383e56;
+		opacity: 1;
+		font-size: 0.6rem;
+	}
+}
