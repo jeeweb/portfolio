@@ -2,396 +2,104 @@
 <html lang="ko">
 
 <head>
-	<meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<!-- FontAwesome -->
-	<script src="https://kit.fontawesome.com/642e975ea7.js" crossorigin="anonymous"></script>
-	<title>Jiee Kong</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="css/style.css" />
+	<title>Jiee Kong</title>
 </head>
 
 <body>
 	<div class="wrapper">
-		<!-- <<header class="header">
-				button type="button" class="btn btn__nav">
-					<p class="btn__nav-icon">
-						<span class="btn__nav-bar"></span>
-						<span class="btn__nav-bar"></span>
-					</p>
-				</button>
-		</header> -->
-		<div class="section-wrap">
-			<h1 class="header__logo logo">Jee's</h1>
-			<section class="section__my">
-				<div class="inner">
-					<div class="flex-center">
-						<div class="my__pic"></div>
-						<div class="my__greeting">
-							<p>안녕하세요</p>
-							<p><strong>공지이</strong>입니다</p>
-						</div>
-					</div>
+		<header class="header">
+			<h1 class="logo dark-blue">Jee's</h1>
+		</header>
+		<div class="container">
+			<div class="avatar-wrap">
+				<div class="greeting greeting-shadow">
+					<p>Hello!</p>
+					<p>I'm Jiee,<br> a Web Publisher.</p>
 				</div>
-			</section>
-			<section class="section__project">
-				<div class="scroll-content">
-					<div class="scroll__images">
-						<div class="project__image">
-							<img src="images/project-dive.png" />
-						</div>
-						<div class="project__image">
-							<img src="images/project-genesis.jpeg" />
-						</div>
-						<div class="project__image">
-							<img src="images/project-kt.jpeg" />
-						</div>
-					</div>
-					<div class="scroll__text">
-						<div class="project__desc">
-							<p class="project__list-title">현대카드 DIVE</p>
-							<p class="project__list-desc">
-								<strong>DIVE 웹사이트 클론</strong>
-								<span>작업페이지: 메인, What's on, Space(디자인라이브러리)</span>
-							</p>
-							<p class="project__list-lang">HTML, CSS, JavaScript</p>
-							<div class="project__list-link">
-								<a href="https://jeeweb.github.io/DIVE_cloning/" class="link link__site" target="_blank">Site
-									Link</a>
-								<a href="https://github.com/jeeweb/DIVE_cloning" class="link link__github" target="_blank">Github</a>
-							</div>
+				<div class="greeting">
+					<p class="dark-blue">Hello!</p>
+					<p>I'm <span class="dark-blue">Jiee</span>,<br> a Web Publisher.</p>
+				</div>
+				<div class="avatar"></div>
+			</div>
+			<div class="projects-wrap">
+				<ul class="lst__projects">
+					<li class="project__item">
+						<div class="project__img">
+							<img src="images/project-dive.png" alt="">
+							<img src="images/project-dive-blue.png" alt="">
 						</div>
 						<div class="project__desc">
-							<p class="project__list-title">제네시스 부티크</p>
-							<p class="project__list-desc">
-								<strong>제네시스 부티크 웹사이트 클론</strong>
-								<span>작업페이지: 메인, by제네시스, by킨포크, 브랜드굿즈, 회원전용</span>
-							</p>
-							<p class="project__list-lang">HTML, CSS</p>
-							<div class="project__list-link">
-								<a href="https://jeeweb.github.io/genesis-boutique/" class="link link__site" target="_blank">Site
-									Link</a>
-								<a href="https://github.com/jeeweb/genesis-boutique" class="link link__github"
-									target="_blank">Github</a>
+							<span class="project__label">프로젝트</span>
+							<div>
+								<strong class="project__title">스마일게이트 재무회계통합포털서비스</strong>
+								<p class="project__lang">HTML, SCSS, jQuery</p>
 							</div>
+						</div>
+					</li>
+					<li class="project__item">
+						<div class="project__img">
+							<img src="images/project-dive.png" alt="">
+							<img src="images/project-dive-blue.png" alt="">
 						</div>
 						<div class="project__desc">
-							<p class="project__list-title">KT</p>
-							<p class="project__list-desc">
-								<strong>KT 웹사이트 클론</strong>
-								<span>작업페이지: 메인 </span>
-							</p>
-							<p class="project__list-lang">HTML, CSS, JavaScript</p>
-							<div class="project__list-link">
-								<a href="https://jeeweb.github.io/DIVE_cloning/" class="link link__site" target="_blank">Site
-									Link</a>
-								<a href="https://github.com/jeeweb/DIVE_cloning" class="link link__github" target="_blank">Github</a>
+							<span class="project__label">프로젝트</span>
+							<div>
+								<strong class="project__title">이노소프트 사내 그룹웨어</strong>
+								<p class="project__lang">HTML, CSS</p>
 							</div>
 						</div>
-					</div>
-				</div>
-			</section>
-			<!-- <section class="section__project">
-				<h2 class="section__title">My Project</h2>
-				<div class="section__cnt">
-					<div class="project__list">
-						<div class="project__list-box">
-							<div class="project__list-items project__dive">
-								<div class="project__desc">
-									<p class="project__list-title">현대카드 DIVE</p>
-									<p class="project__list-desc">
-										<strong>DIVE 웹사이트 클론</strong>
-										<span>작업페이지: 메인, What's on, Space(디자인라이브러리)</span>
-									</p>
-									<p class="project__list-lang">HTML, CSS, JavaScript</p>
-									<div class="project__list-link">
-										<a href="https://jeeweb.github.io/DIVE_cloning/" class="link link__site" target="_blank">Site
-											Link</a>
-										<a href="https://github.com/jeeweb/DIVE_cloning" class="link link__github"
-											target="_blank">Github</a>
-									</div>
-								</div>
-								<div class="project__img">
-									<img src="images/project-dive.jpg" alt="" />
-								</div>
+					</li>
+					<li class="project__item">
+						<div class="project__img">
+							<img src="images/project-dive.png" alt="">
+							<img src="images/project-dive-blue.png" alt="">
+						</div>
+						<div class="project__desc">
+							<span class="project__label">클론코딩</span>
+							<div>
+								<strong class="project__title">현대카드 DIVE</strong>
+								<p class="project__lang">HTML, CSS, JavaScript</p>
 							</div>
 						</div>
-						<div class="project__list-box">
-							<div class="project__list-items project__genesis">
-								<div class="project__desc">
-									<p class="project__list-title">제네시스 부티크</p>
-									<p class="project__list-desc">
-										<strong>제네시스 부티크 웹사이트 클론</strong>
-										<span>작업페이지: 메인, by제네시스, by킨포크, 브랜드굿즈, 회원전용</span>
-									</p>
-									<p class="project__list-lang">HTML, CSS</p>
-									<div class="project__list-link">
-										<a href="https://jeeweb.github.io/genesis-boutique/" class="link link__site" target="_blank">Site
-											Link</a>
-										<a href="https://github.com/jeeweb/genesis-boutique" class="link link__github"
-											target="_blank">Github</a>
-									</div>
-								</div>
-								<div class="project__img">
-									<img src="images/project-genesis.jpg" alt="">
-								</div>
+					</li>
+					<li class="project__item">
+						<div class="project__img">
+							<img src="images/project-genesis.jpeg" alt="">
+							<img src="images/project-genesis-blue.png" alt="">
+						</div>
+						<div class="project__desc">
+							<span class="project__label">클론코딩</span>
+							<div>
+								<strong class="project__title">제네시스 부티크</strong>
+								<p class="project__lang">HTML, CSS</p>
 							</div>
 						</div>
-						<div class="project__list-box">
-							<div class="project__list-items project__kt">
-								<div class="project__desc">
-									<p class="project__list-title">KT</p>
-									<p class="project__list-desc">
-										<strong>KT 웹사이트 클론</strong>
-										<span>작업페이지: 메인 </span>
-									</p>
-									<p class="project__list-lang">HTML, CSS, JavaScript</p>
-									<div class="project__list-link">
-										<a href="https://jeeweb.github.io/DIVE_cloning/" class="link link__site" target="_blank">Site
-											Link</a>
-										<a href="https://github.com/jeeweb/DIVE_cloning" class="link link__github"
-											target="_blank">Github</a>
-									</div>
-								</div>
-								<div class="project__img">
-									<img src="images/project-kt.jpeg" alt="">
+					</li>
+					<!-- <li class="project__item">
+							<div class="project__img">
+								<img src="images/project-kt.jpeg" alt="">
+								<img src="images/project-kt-blue.png" alt="">
+							</div>
+							<div class="project__desc">
+								<span class="project__label">클론코딩</span>
+								<div>
+									<strong class="project__title">KT</strong>
+									<p class="project__lang">HTML, CSS, JavaScript</p>
 								</div>
 							</div>
-						</div>
-					</div>
-					<div class="project__list project__list--horizontal">
-						<div class="project__list-box">
-							<div class="project__list-items">
-								<div class="project__desc">
-									<p class="project__list-desc">
-										<strong>계산기</strong>
-										<span>계산기 구현</span>
-									</p>
-									<p class="project__list-lang">HTML, CSS, JavaScript</p>
-									<div class="project__list-link">
-										<a href="#" class="link link__site" target="_blank">Demo
-											Link</a>
-										<a href="#" class="link link__github" target="_blank">Github</a>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="project__list-box">
-							<div class="project__list-items">
-								<div class="project__desc">
-									<p class="project__list-desc">
-										<strong>To-do List</strong>
-										<span>투두리스트</span>
-									</p>
-									<p class="project__list-lang">HTML, CSS, JavaScript</p>
-									<div class="project__list-link">
-										<a href="#" class="link link__site" target="_blank">Demo
-											Link</a>
-										<a href="#" class="link link__github" target="_blank">Github</a>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="project__list-box">
-							<div class="project__list-items">
-								<div class="project__desc">
-									<p class="project__list-desc">
-										<strong>프로젝트</strong>
-										<span>프로젝트설명</span>
-									</p>
-									<p class="project__list-lang">HTML, CSS, JavaScript</p>
-									<div class="project__list-link">
-										<a href="#" class="link link__site" target="_blank">Demo
-											Link</a>
-										<a href="#" class="link link__github" target="_blank">Github</a>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="project__list-box">
-							<div class="project__list-items">
-								<div class="project__desc">
-									<p class="project__list-desc">
-										<strong>프로젝트</strong>
-										<span>프로젝트설명</span>
-									</p>
-									<p class="project__list-lang">HTML, CSS, JavaScript</p>
-									<div class="project__list-link">
-										<a href="#" class="link link__site" target="_blank">Demo
-											Link</a>
-										<a href="#" class="link link__github" target="_blank">Github</a>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section> -->
-			<section class="section__skills">
-				<div class="inner">
-					<h2 class="section__title">What I can do</h2>
-					<div class="section__cnt">
-						<div class="skills__list">
-							<ul class="skills__list-box">
-								<li class="skill__item turn-over">
-									<div class="skill__item-group skill--front">
-										<div class="inner-border">
-											<div class="inner-area">
-												<div class="mark-wrap">
-													<img src="images/skills-html.png" alt="html" class="skill__item-mark">
-												</div>
-												<span class="skill__item-num">80%</span>
-											</div>
-										</div>
-									</div>
-									<div class="skill__item-group skill--back">
-										<div class="inner-border">
-											<span>웹표준</span>
-											<span>웹접근성</span>
-											<span>BEM 방법론</span>
-										</div>
-									</div>
-								</li>
-								<li class="skill__item turn-over">
-									<div class="skill__item-group skill--front">
-										<div class="inner-border">
-											<div class="inner-area">
-												<div class="mark-wrap">
-													<img src="images/skills-css.png" alt="css" class="skill__item-mark">
-												</div>
-												<span class="skill__item-num">80%</span>
-											</div>
-										</div>
-									</div>
-									<div class="skill__item-group skill--back">
-										<div class="inner-border">
-											<span>SASS</span>
-											<span>CSS Flex</span>
-											<span>CSS Grid</span>
-										</div>
-									</div>
-								</li>
-								<li class="skill__item turn-over">
-									<div class="skill__item-group skill--front">
-										<div class="inner-border">
-											<div class="inner-area">
-												<div class="mark-wrap">
-													<img src="images/skills-js.png" alt="javascript" class="skill__item-mark">
-												</div>
-												<span class="skill__item-num">60%</span>
-											</div>
-										</div>
-									</div>
-									<div class="skill__item-group skill--back">
-										<div class="inner-border">
-											<span>jQuery</span>
-											<span>expressJS</span>
-										</div>
-									</div>
-								</li>
-								<!-- <li class="skill__item">
-									<div class="skill__item-group skill--front">
-										<img src="images/skills-react.png" alt="react" class="skill__item-mark">
-										<span class="skill__item-num">30%</span>
-									</div>
-								</li> -->
-							</ul>
-							<ul class="skills__list-box">
-								<li class="skill__item move-up">
-									<div class="skill__item-group skill--front">
-										<div class="inner-border">
-											<div class="inner-area">
-												<div class="mark-wrap">
-													<img src="images/skills-git.png" alt="git" class="skill__item-mark">
-												</div>
-											</div>
-										</div>
-									</div>
-								</li>
-								<li class="skill__item move-up">
-									<div class="skill__item-group skill--front">
-										<div class="inner-border">
-											<div class="inner-area">
-												<div class="mark-wrap">
-													<img src="images/skills-zeplin.png" alt="zeplin" class="skill__item-mark">
-												</div>
-											</div>
-										</div>
-									</div>
-								</li>
-								<li class="skill__item move-up">
-									<div class="skill__item-group skill--front">
-										<div class="inner-border">
-											<div class="inner-area">
-												<div class="mark-wrap">
-													<img src="images/skills-ps.png" alt="photoshop" class="skill__item-mark">
-												</div>
-												<span class="skill__item-num">80%</span>
-											</div>
-										</div>
-									</div>
-								</li>
-								<li class="skill__item move-up">
-									<div class="skill__item-group skill--front">
-										<div class="inner-border">
-											<div class="inner-area">
-												<div class="mark-wrap">
-													<img src="images/skills-ai.png" alt="illustrator" class="skill__item-mark">
-												</div>
-												<span class="skill__item-num">80%</span>
-											</div>
-										</div>
-									</div>
-								</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</section>
-		</div>
-	</div>
-	<footer class="footer">
-		<ul class="footer__links">
-			<li class="footer__link-mail">
-				<a href="mailto:jee.vvvv@gmail.com" class="btn btn__email">
-					<i class="fas fa-envelope"></i>
-				</a>
-			</li>
-			<li class="footer__link-git">
-				<a href="https://github.com/jeeweb" class="btn btn__github">
-					<i class="fab fa-github"></i>
-				</a>
-			</li>
-		</ul>
-		<p class="footer__copyright">COPYRIGHT JIEE KONG, ALL RIGHT RESERVED</p>
-	</footer>
-
-	<nav class="nav">
-		<div class="nav__top">
-			<p class="logo">Jee's</p>
-			<button type="button" class="btn btn__close">
-				<p class="btn__close-icon">
-					<span class="btn__close-bar"></span>
-					<span class="btn__close-bar"></span>
-				</p>
-			</button>
-		</div>
-
-		<div class="nav__bottom">
-			<div class="section__greetings-list">
-				<p class="section__greetings-clock"></p>
-				<ul class="section__greetings-msg">
-					<li><span>Good</span> Morning 🌱</li>
-					<li><span>Good</span> Afternoon 🌼</li>
-					<li><span>Good</span> Evening 🌙</li>
+						</li> -->
 				</ul>
 			</div>
 		</div>
-	</nav>
-
-	<!-- <script src="js/script.js"></script> -->
-	<script src="js/project.js"></script>
-	<script src="js/greeting.js"></script>
-	<!-- <script src="js/project.js"></script> -->
+		<footer class="footer">
+			<p class="footer__copyright">COPYRIGHT JIEE KONG, ALL RIGHT RESERVED</p>
+		</footer>
+	</div>
 </body>
 
 </html>
