@@ -157,26 +157,49 @@
 	padding: 4px 0 6px;
 	word-break: keep-all;
 }
-.project__lang{
+.project__desc > div{
 	opacity: 0;
 	transition: opacity 0.6s;
 }
+.project__link{
+	padding-top: 6px;
+	font-size: 0.8em;
+}
+.project__link .link + .link{
+	margin-left: 10px;
+}
 
+.project__link .link{
+	position: relative;
+}
+.project__link .link:after{
+	content: '';
+	position: absolute;
+	bottom: 0px;
+	height: 1px;
+	left: 0;
+	width: 0;
+	background-color: #222;
+	transition: 0.3s;
+}
 
 .project__item:hover .project__img > img:first-child{
-	animation: moveX 14s linear;
+	animation: moveX 10s linear;
 }
 .project__item:hover .project__img > img:last-child{
 	opacity: 0;
-	animation: moveX 14s linear;
+	animation: moveX 10s linear;
 }
 .project__item:hover .project__desc{
 	color: #222;
 }
-.project__item:hover .project__lang{
+.project__item:hover .project__desc > div{
 	opacity: 1;
 }
 
+.project__link .link:hover::after{
+	width: 100%;
+}
 
 @media (max-width: 1200px) {
 	.avatar-wrap{
@@ -244,6 +267,7 @@
 @media (max-width: 860px) {
 	.wrapper{
 		margin: 36px;
+		padding: 0 16px;
 		width: calc(100vw - 72px);
 		height: calc(100vh - 72px);
 	}
@@ -260,19 +284,21 @@
 
 	.avatar-wrap{
 		width: 100%;
+		overflow-x: hidden;
 	}
 	.greeting{
 		display: block;
 		width: 100%;
 	}
 	.greeting > p:first-child{
-		transform: translate(0px, 0px);
+		transform: translate(-6px, 0px);
+		font-size: 1.6em;
 	}	
 	.greeting p:last-child{
 		transform: translate(0px, 132px);
 	}
 	.avatar{
-		top: 22%
+		top: 20%
 	}
 
 	.projects-wrap{
@@ -296,12 +322,17 @@
 	.lst__projects::-webkit-scrollbar-track{
 		background-color: none
 	}
+	.project__title{
+		font-size: 1.4em;
+	}
 	.project__desc{
 		text-align: center;
 		color: #222;
 	}
-	.project__item .project__lang{
+	.project__desc > div{
 		opacity: 1;
 	}
-		
+	.project__link .link:after{
+		width: 100%;
+	}
 }
