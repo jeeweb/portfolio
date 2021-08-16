@@ -49,7 +49,8 @@
 .container{
 	display: flex;
 	align-items: center;
-	margin: 24px 0;
+	/* margin: 24px 0; */
+	max-height: calc(100vh - 112px - 70px - 39px);
 }
 
 .avatar-wrap{
@@ -70,10 +71,10 @@
 }
 .greeting > p:first-child{
 	font-size: 2em;
-	transform: translate(10px, 47px) rotate(12deg);
+	transform: translate(10px, 2vh) rotate(12deg);
 }
 .greeting > p:last-child{
-	transform: translate(10px, 36px);
+	transform: translate(10px, 4vh);
 	line-height: 1.1;
 }
 .greeting-shadow{
@@ -109,6 +110,7 @@
 .lst__projects{
 	display: flex;
 	overflow-x: scroll;
+	height: 100%
 }
 
 .lst__projects::-webkit-scrollbar{
@@ -129,7 +131,7 @@
 .project__img{
 	position: relative;
 	width: 36vh;
-	height: 48vh;
+	height: 64%;
 	border-radius: 16px;
 	overflow: hidden;
 }
