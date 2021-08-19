@@ -13,6 +13,26 @@
 	color: #283593;
 }
 
+.btn__close{
+	position: relative;
+	width: 36px;
+	height: 36px;
+}
+.btn__close span{
+	position: absolute;
+	top: 18px;
+	left: 0;
+	height: 1px;
+	width: 36px;
+	background-color: #283593;
+}
+.btn__close span:first-child{
+	transform: rotate(-135deg);
+}
+.btn__close span:last-child{
+	transform: rotate(-45deg);
+}
+
 /* layout */
 .wrapper{
 	display: grid;
@@ -26,6 +46,7 @@
 	background-color: #F5F5F5;
 	box-shadow: 6px 8px 10px rgba(20,20,20,0.3);
 }
+
 
 /* ===== header ===== */
 .header{
@@ -43,6 +64,53 @@
 	padding: 12px 0;
 	font-size: 12px;
 	text-align: right;
+}
+
+
+/* ===== modal ===== */
+.modal-wrap{
+	display: none;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100vw;
+	height: 100vh;
+}
+.modal-wrap.show{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 500;
+}
+.mask{
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100vw;
+	height: 100vh;
+	background-color: rgba(0,0,0,0.5); 
+}
+.modal{
+	position: relative;
+	padding: 36px;
+	border-radius: 12px;
+	background-color: #F5F5F5;
+	z-index: 1;
+	max-height: 80vh;
+	overflow: auto;	
+}
+.modal .btn__close{
+	position: absolute;
+	top: 36px;
+	right: 36px;
+}
+.modal__title{
+	font-weight: bold;
+ 	font-size: 2em;
+	margin-bottom: 24px;
+}
+.modal__cnt{
+	max-width: 80vw;
 }
 
 /* ===== container ===== */
@@ -145,6 +213,7 @@
 	height: 0;
 }
 
+
 /* project */
 .projects-wrap{
 	display: flex;
@@ -174,7 +243,6 @@
 .project__item{
 	margin-right: 26px;
 }
-
 .project__img{
 	position: relative;
 	width: 36vh;
@@ -249,6 +317,42 @@
 .project__link .link:hover::after{
 	width: 100%;
 }
+
+
+/* modal-skills */
+.lst__skills{
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	gap: 36px 48px;
+}
+.skills__item{
+	max-width: 126px;
+	font-size: 0.85em;
+}
+.skills__img{
+	width: 126px;
+	height: 124px;
+	margin-bottom: 12px;
+	background-color: #fff;
+	border-radius: 20px;
+	padding: 16px;
+	box-sizing: border-box;
+}
+.skills__img.no-padding{
+	padding: 0;
+}
+
+.skills__img img{
+	height:100%;
+	width: auto;
+}
+.skills__name{
+	display: block;
+	font-weight: bold;
+	font-size: 18px;
+	padding-bottom: 6px;
+}
+
 
 @media (max-width: 1200px) {
 	.avatar-wrap{
