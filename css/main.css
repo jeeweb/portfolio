@@ -424,10 +424,10 @@
 
 @media (max-width: 860px) {
 	.wrapper{
-		margin: 36px;
+		margin: 16px;
 		padding: 0 16px;
-		width: calc(100vw - 72px);
-		height: calc(100vh - 72px);
+		width: calc(100vw - 32px);
+		height: calc(100vh - 32px);
 	}
 	.logo{
 		text-align: center;
@@ -466,6 +466,7 @@
 	.projects-wrap{
 		max-width: 100%;
 		height: auto;
+		margin-top: 52px
 	}
 	.lst__projects{
 		max-height: 100%;
