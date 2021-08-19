@@ -431,6 +431,7 @@
 	}
 	.logo{
 		text-align: center;
+		font-size: 1.6em;
 	}
 	.footer{
 		text-align: center;
@@ -456,10 +457,10 @@
 		transform: translate(0px, 132px);
 	}
 	.avatar{
-		top: 12%
+		top: 16%
 	}
 	.btn-wrap{
-		bottom: 24%;
+		bottom: 6%;
 	}
 
 	.projects-wrap{
