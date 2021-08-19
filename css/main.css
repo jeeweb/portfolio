@@ -429,6 +429,7 @@
 		width: calc(100vw - 32px);
 		height: calc(100vh - 32px);
 	}
+	
 	.logo{
 		text-align: center;
 		font-size: 1.6em;
@@ -439,6 +440,15 @@
 	.container{
 		display: block;
 		overflow-y: auto;
+	}
+
+	.modal{
+		padding: 36px;
+		max-height: 70vh;
+	}
+	.modal .btn__close{
+		top: 36px;
+		right: 36px;
 	}
 
 	.avatar-wrap{
@@ -528,7 +538,7 @@
 	/* modal-skills */
 	.lst__skills{
 		grid-template-columns: repeat(4, 1fr);
-		gap: 24px;	
+		gap: 18px;	
 	}
 	.skills__item{
 		max-width: 100px;
@@ -538,8 +548,11 @@
 		height: 100px;
 		padding: 12px;
 	}
+
+
 }
-@media (max-width: 860px) {
+
+@media (max-width: 600px) {
 	.lst__skills{
 		grid-template-columns: repeat(2, 1fr);
 	}
