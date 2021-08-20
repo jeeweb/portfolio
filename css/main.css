@@ -244,6 +244,7 @@
 	margin-right: 26px;
 }
 .project__img{
+	display: block;
 	position: relative;
 	width: 36vh;
 	height: 64%;
