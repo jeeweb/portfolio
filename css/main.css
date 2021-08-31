@@ -113,6 +113,7 @@
 	max-width: 80vw;
 }
 
+
 /* ===== container ===== */
 .container{
 	display: flex;
@@ -131,7 +132,7 @@
 /* greeting */
 .greeting{
 	position: absolute;
-	top: 0;
+	top: -40px;
 	height: 100%;
 	font-size: 4.8em;
 	font-family: 'Yellowtail';
@@ -381,7 +382,7 @@
 	.greeting{
 		display: flex;
 		flex-direction: column;
-		justify-content: space-around;
+		justify-content: space-between;
 		align-items: center;
 		text-align: center;
 	}
@@ -392,7 +393,7 @@
 		transform: translate(-18px, 0px);
 	}
 	.avatar{
-		top: 28%;
+		top: 18%;
 		right: 50%;
 		transform: translateX(50%);
 		width: 200px;
@@ -429,8 +430,12 @@
 		padding: 0 16px;
 		width: calc(100vw - 32px);
 		height: calc(100vh - 32px);
+		grid-template-rows: 54px 1fr 48px;
 	}
 	
+	.header{
+		padding-bottom: 0;
+	}
 	.logo{
 		text-align: center;
 		font-size: 1.6em;
@@ -457,6 +462,7 @@
 		overflow: hidden;
 	}
 	.greeting{
+		top: -24px;
 		display: block;
 		width: 100%;
 	}
@@ -466,9 +472,6 @@
 	}	
 	.greeting p:last-child{
 		transform: translate(0px, 132px);
-	}
-	.avatar{
-		top: 16%
 	}
 	.btn-wrap{
 		bottom: 6%;
